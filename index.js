@@ -5,13 +5,14 @@ async function main() {
     const arweave = Arweave.init();
     const args = process.argv.slice(2);
     const target = args[0];
+    const targetLength = target.length;
 
     console.time("stamp"); 
 
     do {
         var key = await arweave.wallets.generate();
         var address = await arweave.wallets.jwkToAddress(key)
-        var prefix = address.substr(0,1);
+        var prefix = address.substr(0,targetLength);
     } while ( prefix != target)
 
     console.log(key);
