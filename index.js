@@ -1,4 +1,5 @@
 const Arweave = require('arweave');
+const fs = require('fs').promises; 
 
 async function main() {
 
@@ -15,8 +16,8 @@ async function main() {
         var prefix = address.substr(0,targetLength);
     } while ( prefix != target)
 
-    console.log(key);
-    console.log(address);
+    err = await fs.writeFile('arweave-key-' + address + '.json', JSON.stringify(key) );
+    if (err) console.log(err); else console.log("found one!"); 
 
     console.timeEnd("stamp"); 
 

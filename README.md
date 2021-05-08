@@ -1,7 +1,7 @@
 # arvanity
 a vanity address generator for Arweave
 
-## usage
+### usage
   
 node index.js XXX
 
@@ -14,16 +14,12 @@ a 4 letter prefix would take... all month or so
 
 however if you have some cores to spare you can spin up a bunch, as in 
 
-nohup node index js XXX &
+    node index.js XXX 
 
-nohup node index js XXX &
+    node index.js XXX 
 
-nohup node index js XXX &
+    node index.js XXX 
 
-nohup node index js XXX &
+in this case you'd get there 3x faster 
 
-nohup node index js XXX &
-
-nohup node index js XXX &
-
-in this case you'd get there 6x faster and you'd find output if any in ./nohup.out
+a wallet file with the found key will be written out the current directory
