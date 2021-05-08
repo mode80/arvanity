@@ -1,0 +1,14 @@
+{
+  "name": "arvanity",
+  "version": "0.0.1",
+  "description": "makes Arweave vanity addresses. hopefully",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mode80",
+  "license": "MIT",
+  "dependencies": {
+    "arweave": "^1.10.13"
+  }
+}
