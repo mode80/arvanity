@@ -20,11 +20,11 @@ a 4 letter prefix would take... all month or so
 
 however if you have some cores to spare you can spin up a bunch, as in 
 
-    node index.js XXX 
+    node index.js XXX &
 
-    node index.js XXX 
+    node index.js XXX &
 
-    node index.js XXX 
+    node index.js XXX &
 
 in this case you'd get there 3x faster 
 
