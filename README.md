@@ -22,4 +22,4 @@ however if you have some cores to spare you can spin up a bunch, as in
 
 in this case you'd get there 3x faster 
 
-a wallet file with the found key will be written out the current directory
+a wallet file with the found key will be written out to the current directory
