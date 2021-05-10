@@ -1,11 +1,17 @@
 # arvanity
 a vanity address generator for Arweave
 
+### install
+
+fetch dependencies with
+
+  npm install
+
 ### usage
   
 node index.js XXX
 
-where XXX is the prefix you want the generated address to have
+where "XXX" is the prefix you want the generated address to have
 
 it ain't fast
 
