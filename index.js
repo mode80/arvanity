@@ -5,7 +5,7 @@ async function main() {
 
     const arweave = Arweave.init();
     const args = process.argv.slice(2);
-    const ignoreCase = (args[1]?.toLowerCase() == "true");
+    const ignoreCase = args[1] ? (args[1].toLowerCase() == "true") : false;
     var target = args[0];
     if (ignoreCase) target = target.toLowerCase();
     const targetLength = target.length;
