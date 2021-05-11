@@ -5,7 +5,9 @@ async function main() {
 
     const arweave = Arweave.init();
     const args = process.argv.slice(2);
-    const target = args[0];
+    const ignoreCase = (args[1]?.toLowerCase() == "true");
+    var target = args[0];
+    if (ignoreCase) target = target.toLowerCase();
     const targetLength = target.length;
 
     console.time("stamp"); 
@@ -14,6 +16,7 @@ async function main() {
         var key = await arweave.wallets.generate();
         var address = await arweave.wallets.jwkToAddress(key)
         var prefix = address.substr(0,targetLength);
+        if (ignoreCase) prefix = prefix.toLowerCase();
     } while ( prefix != target)
 
     err = await fs.writeFile('arweave-key-' + address + '.json', JSON.stringify(key) );
